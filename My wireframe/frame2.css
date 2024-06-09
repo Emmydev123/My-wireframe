@@ -1,0 +1,231 @@
+.home-text {
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 130px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.deal-text {
+  display: inline-block;
+  margin-top: 0px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.text-box {
+  font-size: 9px;
+  color: rgb(221, 218, 218);
+  margin-left: 730px;
+  margin-top: 0px;
+  display: inline-block;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgb(207, 204, 204);
+  border-style: solid;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 180px;
+  font-weight: bold;
+}
+
+.cart-text {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial;
+  margin-left: 15px;
+}
+
+.account-text {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial;
+  margin-left: 15px;
+}
+
+
+.check-text {
+  font-family: Arial;
+  font-size: 90px;
+  margin-left: 32px;
+}
+
+.card-button {
+  background-image: linear-gradient(to right, black, rgb(104, 102, 102));
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: 40px;
+}
+.payment_options{
+  display: flex;
+  align-items: center;
+}
+.google-pay-button {
+  width: 92px;
+  height: 29px;
+  background-color: white;
+  color: grey;
+  font-family: Arial;
+  border-color: black;
+  border-radius: 4px;
+  /* padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 32px;
+  padding-right: 32px; */
+  margin-left: 5px;
+}
+
+.google-pay-button>div>img {
+  width: 40px;
+  height: 40px;
+}
+
+.google-pay-button>div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apple-pay-button {
+  width: 92px;
+  height: 29px;
+  background-color: white;
+  color: grey;
+  font-family: Arial;
+  border-color: black;
+  border-radius: 4px;
+  /* padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 32px;
+  padding-right: 32px; */
+  margin-left: 5px;
+}
+
+.apple-pay-button>div>img {
+  width: 40px;
+  height: 40px;
+}
+
+.apple-pay-button>div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.name-text {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 13px;
+  color: black;
+  margin-bottom: 0px;
+  margin-top: 32px;
+  margin-left: 40px;
+}
+
+.name-box {
+  padding-top: 6px;
+  padding-bottom: 26px;
+  padding-left: 32px;
+  padding-right: 175px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border-color: rgb(141, 139, 139);
+  border-style: solid;
+  margin-left: 40px;
+}
+
+.card-text {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 13px;
+  color: black;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 40px;
+}
+
+.card-box {
+  padding-top: 6px;
+  padding-bottom: 26px;
+  padding-left: 32px;
+  padding-right: 175px;
+  margin-top: 4px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  border-color: rgb(141, 139, 139);
+  border-style: solid;
+  margin-left: 40px;
+  display: block;
+}
+
+.valid-text {
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  margin-left: 38px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 13px;
+  color: black;
+}
+
+.cvv-text {
+  display: inline-block;
+  margin-left: 95px;
+  margin-bottom: 3px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 13px;
+  color: black;
+}
+
+.valid-box {
+  margin-left: 39px;
+  margin-top: 0px;
+  padding-top: 6px;
+  border-radius: 5px;
+  padding-bottom: 26px;
+  border-color: rgb(141, 139, 139);
+  border-style: solid;
+}
+
+.cvv-box {
+  margin-left: 12px;
+  border-radius: 5px;
+  padding-top: 6px;
+  padding-bottom: 26px;
+  padding-right: 20px;
+  border-color: rgb(141, 139, 139);
+  border-style: solid;
+}
+
+
+.purchase-button {
+  display: block;
+  margin-top: 35px;
+  font-family: Arial;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  margin-left: 160px;
+  margin-top: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 25px;
+  padding-right: 25px;
+}

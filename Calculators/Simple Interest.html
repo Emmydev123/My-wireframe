@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+    <script>
+        // Function to calculate simple interest
+function calculateSimpleInterest(principal, rate, time) {
+    return (principal * rate * time) / 100;
+}
+
+// Function to get input from the user using prompts
+function getInput(promptText) {
+    let input = prompt(promptText);
+    if (input === null) {
+        // If the user cancels the prompt, return null
+        return null;
+    }
+    // Parse input as float
+    input = parseFloat(input);
+    // If input is not a number or NaN, ask again
+    if (isNaN(input)) {
+        alert("Please enter a valid number!");
+        return getInput(promptText);
+    }
+    return input;
+}
+
+// Main function
+function main() {
+    const principal = getInput("Enter the principal amount:");
+    if (principal === null) return; // Exit if user cancels
+
+    const rate = getInput("Enter the annual interest rate (in percentage):");
+    if (rate === null) return; // Exit if user cancels
+
+    const time = getInput("Enter the time period (in years):");
+    if (time === null) return; // Exit if user cancels
+
+    const interest = calculateSimpleInterest(principal, rate, time);
+    alert(`The simple interest is: ${interest.toFixed(2)}`);
+}
+
+// Call the main function to start the program
+main();
+
+    </script>
+</body>
+</html>

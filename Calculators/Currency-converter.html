@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <script>
+        // Exchange rates (as of 2024-05-23)
+const exchangeRates = {
+    USD: 1, // 1 US Dollar = 1 US Dollar
+    NGN: 415.50 // 1 US Dollar = 415.50 Nigerian Naira
+};
+
+// Function to convert currency
+function convertCurrency(amount, fromCurrency, toCurrency) {
+    if (fromCurrency === toCurrency) {
+        return amount; // No conversion needed
+    }
+
+    const fromRate = exchangeRates[fromCurrency];
+    const toRate = exchangeRates[toCurrency];
+
+    if (!fromRate || !toRate) {
+        return null; // Invalid currency code
+    }
+
+    const convertedAmount = (amount / fromRate) * toRate;
+    return convertedAmount.toFixed(2); // Round to 2 decimal places
+}
+
+// Function to get input from the user using prompts
+function getInput(promptText) {
+    let input = prompt(promptText);
+    if (input === null) {
+        // If the user cancels the prompt, return null
+        return null;
+    }
+    // Parse input as float
+    input = parseFloat(input);
+    // If input is not a number or NaN, ask again
+    if (isNaN(input)) {
+        alert("Please enter a valid number!");
+        return getInput(promptText);
+    }
+    return input;
+}
+
+// Main function
+function main() {
+    const amount = getInput("Enter the amount to convert:");
+    if (amount === null) return; // Exit if user cancels
+
+    const fromCurrency = prompt("Enter the currency to convert from (e.g., NGN, USD):").toUpperCase();
+    if (!exchangeRates[fromCurrency]) {
+        alert("Invalid currency code!");
+        return main(); // Ask for input again
+    }
+
+    const toCurrency = prompt("Enter the currency to convert to (e.g., NGN, USD):").toUpperCase();
+    if (!exchangeRates[toCurrency]) {
+        alert("Invalid currency code!");
+        return main(); // Ask for input again
+    }
+
+    const convertedAmount = convertCurrency(amount, fromCurrency, toCurrency);
+    if (convertedAmount === null) {
+        alert("Invalid currency code!");
+        return main(); // Ask for input again
+    }
+
+    alert(`${amount} ${fromCurrency} equals ${convertedAmount} ${toCurrency}`);
+}
+
+// Call the main function to start the program
+main();
+
+    </script>
+</body>
+</html>

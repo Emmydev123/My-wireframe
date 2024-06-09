@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <script>
+        // Function to convert temperature from Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+// Function to convert temperature from Fahrenheit to Celsius
+function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5/9;
+}
+
+// Function to get input from the user using prompts
+function getInput(promptText) {
+    let input = prompt(promptText);
+    if (input === null) {
+        // If the user cancels the prompt, return null
+        return null;
+    }
+    // Parse input as float
+    input = parseFloat(input);
+    // If input is not a number or NaN, ask again
+    if (isNaN(input)) {
+        alert("Please enter a valid number!");
+        return getInput(promptText);
+    }
+    return input;
+}
+
+// Main function
+function main() {
+    const temperature = getInput("Enter the temperature:");
+    if (temperature === null) return; // Exit if user cancels
+
+    const scale = prompt("Enter the scale (C for Celsius, F for Fahrenheit):").toUpperCase();
+    if (scale !== "C" && scale !== "F") {
+        alert("Invalid scale! Please enter 'C' for Celsius or 'F' for Fahrenheit.");
+        return main(); // Ask for input again
+    }
+
+    let convertedTemperature;
+    let targetScale;
+    if (scale === "C") {
+        convertedTemperature = celsiusToFahrenheit(temperature);
+        targetScale = "Fahrenheit";
+    } else {
+        convertedTemperature = fahrenheitToCelsius(temperature);
+        targetScale = "Celsius";
+    }
+
+    alert(`${temperature} ${scale} equals ${convertedTemperature.toFixed(2)} ${targetScale}`);
+}
+
+// Call the main function to start the program
+main();
+
+    </script>
+</body>
+</html>

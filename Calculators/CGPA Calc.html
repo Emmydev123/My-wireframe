@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+</head>
+<body>
+    <script>
+        // Function to calculate CGPA
+function calculateCGPA(grades, credits) {
+  let totalGradePoints = 0;
+  let totalCredits = 0;
+
+  for (let i = 0; i < grades.length; i++) {
+      totalGradePoints += grades[i] * credits[i];
+      totalCredits += credits[i];
+  }
+
+  const cgpa = totalGradePoints / totalCredits;
+  return cgpa.toFixed(2); // Round to 2 decimal places
+}
+
+// Function to get input from the user using prompts
+function getInput(promptText) {
+  let input = prompt(promptText);
+  if (input === null) {
+      // If the user cancels the prompt, return null
+      return null;
+  }
+  // Parse input as float
+  input = parseFloat(input);
+  // If input is not a number or NaN, ask again
+  if (isNaN(input)) {
+      alert("Please enter a valid number!");
+      return getInput(promptText);
+  }
+  return input;
+}
+
+// Main function
+function main() {
+  const numSubjects = parseInt(prompt("Enter the number of subjects:"));
+
+  if (isNaN(numSubjects) || numSubjects <= 0) {
+      alert("Please enter a valid number!");
+      return main(); // Ask for input again
+  }
+
+  const grades = [];
+  const credits = [];
+
+  for (let i = 0; i < numSubjects; i++) {
+      const grade = getInput(`Enter grade for subject ${i + 1}:`);
+      if (grade === null) return; // Exit if user cancels
+      grades.push(grade);
+
+      const credit = getInput(`Enter credit for subject ${i + 1}:`);
+      if (credit === null) return; // Exit if user cancels
+      credits.push(credit);
+  }
+
+  const cgpa = calculateCGPA(grades, credits);
+  alert(`Your CGPA is: ${cgpa}`);
+}
+
+// Call the main function to start the program
+main();
+
+
+    </script>
+</body>
+</html>
